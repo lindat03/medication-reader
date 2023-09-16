@@ -6,7 +6,7 @@ from flask_cors import CORS
 import openai
 import os
 
-API_KEY = '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'
+API_KEY = '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'
 
 app = Flask(__name__)
 
@@ -24,7 +24,11 @@ def upload_image():
         print(ocr_text)
         response_text = generate_response(ocr_text, 'text_files/examples.txt', 'text_files/text_guidelines.txt')
         print(response_text)
-        return jsonify({'text': response_text})
+        split_response = response_text.split("\n")
+        name = split_response[1]
+        frequency = split_response[2]
+        desc = split_response[3]
+        return jsonify({'text': name+'\n'+frequency+'\n'+desc})
     except Exception as e:
         print(e)
         return jsonify({'error': str(e)})

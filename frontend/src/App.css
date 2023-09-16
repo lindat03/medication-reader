@@ -1,38 +1,70 @@
+/* App.css */
+.app-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+    white-space: pre-line;
+    gap: 40px;
+}
+
+.left-side {
+    flex: 1; /* Takes up 50% of the available width */
+    padding: 20px;
+    background-color: #f0f0f0; /* Background color for the left side */
+    border: 1px solid #ddd; /* Add borders or other styling as needed */
+    border-radius: 25px;
+}
+
+.right-side {
+    flex: 1; /* Takes up 50% of the available width */
+    padding: 20px;
+    background-color: #f0f0f0; /* Background color for the right side */
+    border: 1px solid #ddd; /* Add borders or other styling as needed */
+    border-radius: 25px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans:wght@500&family=Poppins:wght@600&display=swap');
+
+body {
+    background: #CCDFCB;
+    font-size: 20px;
+}
+
+.header-title {
+    color: #493197;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
 .App {
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #f3f3fa;
+    height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-content {
+    display: flex;
+    flex-grow: 1;
+    padding: 3vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.upload-container {
+    display: flex;
+    margin: auto;
+    padding: 30px;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #d5e0ff;
+    border-radius: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1, h2 {
+    color: #493197
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+    text-align: center;
 }
