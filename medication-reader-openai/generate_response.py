@@ -1,18 +1,15 @@
 import openai
 import os
 
-API_KEY = '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'
+API_KEY = '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'
 
 
 def generate_response(test_message, examples, guidelines):
     openai.api_key = API_KEY
 
     model = 'text-davinci-003'
-    print("TESTTTTT")
-    print(os.getcwd())
     with open(test_message) as f:
         test_message_output = f.read()
-        print("TTEST")
     f.close()
     with open(examples) as f:
         examples_output = f.read()
@@ -21,7 +18,6 @@ def generate_response(test_message, examples, guidelines):
         guidelines_output = f.read()
     f.close()
      
-    print(test_message_output)
     
 
 
@@ -33,7 +29,6 @@ def generate_response(test_message, examples, guidelines):
         
     ''' + examples_output + "\n\nUse these guidelines to create the text response: \n" + guidelines_output + "\n\nFind a response for this conversation: \n" + test_message_output
     
-    print(response_prompt)
     response = openai.Completion.create(
         prompt=response_prompt,
         model=model,
@@ -41,7 +36,6 @@ def generate_response(test_message, examples, guidelines):
         temperature=0.95,
         n=1,
     )
-    print(response)
 
     f = open('medication-reader-openai/text_files/results.txt', 'w')
     f.write('')
@@ -58,7 +52,6 @@ def generate_response(test_message, examples, guidelines):
     formatted_str = ""
     for r in result_array:
         formatted_str += r
-    print(formatted_str)
     return formatted_str
 
 
