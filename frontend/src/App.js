@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./App.css";
 
 function App() {
     const [ocrText, setOcrText] = useState('');
@@ -32,13 +33,17 @@ function App() {
 
     return (
         <div className="App">
-            <h1>OCR Image Text Extractor</h1>
-            <input type="file" accept="image/*" onChange={handleFileChange} />
-            <button onClick={handleUpload}>Upload Image</button>
-            <div>
-                <h2>OCR Text:</h2>
-                <p>{ocrText}</p>
+            <h1 className="header-title">Shifa</h1>
+            <div className="upload-container">
+                <h1>Upload Medication Label</h1>
+                <input type="file" accept="image/*" onChange={handleFileChange} />
+                <button onClick={handleUpload}>Upload Image</button>
+                <div>
+                    <h2>Medication Information:</h2>
+                    <p>{ocrText}</p>
+                </div>
             </div>
+
         </div>
     );
 }

@@ -1,38 +1,44 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans:wght@500&family=Poppins:wght@600&display=swap');
+body {
+  background: #CCDFCB;
+  font-size: 20px;
+}
+
+.header-title {
+  color: #493197;
+  font-family: 'Poppins', sans-serif;
   text-align: center;
+  letter-spacing: 3px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #f3f3fa;
+  height: 100vh;
+
 }
 
-.App-link {
-  color: #61dafb;
+.main-content {
+  display: flex;
+  flex-grow: 1;
+  padding: 3vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.upload-container {
+  display: flex;
+  margin: auto;
+  padding: 30px;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #d5e0ff;
+  border-radius: 20px;
+}
+
+h1, h2{
+  color: #493197
+}
+
+input{
+  text-align: center;
 }
