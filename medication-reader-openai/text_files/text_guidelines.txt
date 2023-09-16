@@ -1,0 +1,4 @@
+Display the information with bullet points:
+- Name
+- Frequency Taken (how many pills, how many times per day)
+- Description (Do NOT include how often the pill should be taken)
