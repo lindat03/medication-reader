@@ -41,12 +41,12 @@ function App() {
     return (
         <div className="app-container">
           <div className="header-container">
-            <img src="https://cdn.discordapp.com/attachments/1151723427820994571/1152766132483268638/logo.jpeg" alt="Logo" />
+            <img src="https://cdn.discordapp.com/attachments/1147324798725279895/1152957413297758359/image.png" alt="Logo" />
             <h1>Shifa</h1>
           </div>
           <div className="body-container">
             <div className="left-side">
-                <h1 className='titles'>New Scan</h1>
+                <h1 className='titles-scan'>New Scan</h1>
                 <input type="file" accept="image/*" onChange={handleFileChange} />
                 <center><button onClick={handleUpload}>Upload</button></center>
                     <div className="ocr-result">

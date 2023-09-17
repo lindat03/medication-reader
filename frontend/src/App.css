@@ -48,6 +48,7 @@ body {
 .header-container{
     display: flex;
     flex-direction: row;
+    margin: auto;
     gap: 20px;
 }
 .body-container {
@@ -73,10 +74,15 @@ body {
 h1, h2 {
     color: #493197;
     margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .titles{
     margin-top: -5px;
+    text-align: center;
+}
+.titles-scan{
+    margin-bottom: 2vw;
     text-align: center;
 }
 
@@ -85,8 +91,8 @@ input {
 }
 
 img{
-    width: 100px;
-    height: 50%;
+    width: 40px;
+    height: 20%;
 }
 
 button {
@@ -99,7 +105,7 @@ button {
   transition: background-color 0.3s; /* Smooth transition for background color */
   margin-top: 10px;
   font-family: 'Poppins', sans-serif;
-  bottom: 0;
+  align-self: flex-end;
 }
 button:hover {
   background-color: #bfbae8; /* Lighter blue color on hover */
@@ -108,7 +114,16 @@ button:hover {
 .left-side, .right-side{
     display: flex;
     flex-direction: column;
-    height: 50vw;
-    justify-content: space-between;
-    height: 30vw;
+    /* height: 50vw; */
+    /* justify-content: space-around; */
+    /* overflow: auto; */
+}
+
+.right-side{
+    /* min-height: 50vw; */
+    /* justify-content: space-between; */
+}
+
+p{
+    font-size: 15px;
 }
