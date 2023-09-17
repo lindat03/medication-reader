@@ -27,8 +27,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans:wght@500&family=Poppins:wght@600&display=swap');
 
 body {
-    background: #CCDFCB;
+    background: #d5e0ff;
     font-size: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .header-title {
@@ -44,16 +45,24 @@ body {
     background-color: #f3f3fa;
     height: 100vh;
 }
-
-.main-content {
+.header-container{
     display: flex;
-    flex-grow: 1;
-    padding: 3vh;
+    flex-direction: row;
+    gap: 20px;
 }
-
-.upload-container {
+.body-container {
     display: flex;
     margin: auto;
+    flex-grow: 1;
+    gap: 8vw;
+    padding: 3vh;
+    height: 100%;
+}
+
+.app-container {
+    display: flex;
+    margin: auto;
+    width: 80%;
     padding: 30px;
     flex-direction: column;
     gap: 20px;
@@ -62,9 +71,44 @@ body {
 }
 
 h1, h2 {
-    color: #493197
+    color: #493197;
+    margin-top: 0px;
+}
+
+.titles{
+    margin-top: -5px;
+    text-align: center;
 }
 
 input {
     text-align: center;
+}
+
+img{
+    width: 100px;
+    height: 50%;
+}
+
+button {
+  background-color: #988ee3; /* Light blue color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding for the button */
+  border: none; /* Remove the default button border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+  bottom: 0;
+}
+button:hover {
+  background-color: #bfbae8; /* Lighter blue color on hover */
+}
+
+.left-side, .right-side{
+    display: flex;
+    flex-direction: column;
+    height: 50vw;
+    justify-content: space-between;
+    height: 30vw;
 }

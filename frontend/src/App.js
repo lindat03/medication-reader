@@ -40,18 +40,24 @@ function App() {
 
     return (
         <div className="app-container">
-          <div className="left-side">
-            <h1>New Scan</h1>
-            <input type="file" accept="image/*" onChange={handleFileChange} />
-            <button onClick={handleUpload}>Upload</button>
-                <div className="ocr-result">
-                    <p>{ocrText}</p>
-                    <center><button onClick={handleSave}>Save to my list</button></center>
-            </div>
+          <div className="header-container">
+            <img src="https://cdn.discordapp.com/attachments/1151723427820994571/1152766132483268638/logo.jpeg" alt="Logo" />
+            <h1>Shifa</h1>
           </div>
-          <div className="right-side">
-                <h1>My Medications</h1>
-                <p>{medicationList}</p>
+          <div className="body-container">
+            <div className="left-side">
+                <h1 className='titles'>New Scan</h1>
+                <input type="file" accept="image/*" onChange={handleFileChange} />
+                <center><button onClick={handleUpload}>Upload</button></center>
+                    <div className="ocr-result">
+                        <p>{ocrText}</p>
+                        <center><button onClick={handleSave}>Save to my list</button></center>
+                </div>
+            </div>
+            <div className="right-side">
+                    <h1 className='titles'>My Medications</h1>
+                    <p>{medicationList}</p>
+            </div>
           </div>
         </div>
     );
