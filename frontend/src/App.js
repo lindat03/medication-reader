@@ -5,7 +5,6 @@ function App() {
     const [ocrText, setOcrText] = useState('');
     const [medicationList, setMedicationList] = useState('');
     const [selectedFile, setSelectedFile] = useState(null);
-    const [uploadedImage, setUploadedImage] = useState(null);
     const handleFileChange = (e) => {
         setSelectedFile(e.target.files[0]);
     };
@@ -40,13 +39,12 @@ function App() {
     };
 
     return (
-      <div className="app-container">
+        <div className="app-container">
           <div className="left-side">
             <h1>New Scan</h1>
             <input type="file" accept="image/*" onChange={handleFileChange} />
             <button onClick={handleUpload}>Upload</button>
                 <div className="ocr-result">
-                    {uploadedImage && <img src={uploadedImage} alt="Uploaded" />}
                     <p>{ocrText}</p>
                     <center><button onClick={handleSave}>Save to my list</button></center>
             </div>
@@ -55,7 +53,7 @@ function App() {
                 <h1>My Medications</h1>
                 <p>{medicationList}</p>
           </div>
-      </div>
+        </div>
     );
 }
 
